@@ -1,0 +1,214 @@
+/*
+ * Componentes del Design System Ataskate usados en Órdenes y operaciones.
+ * Cada bloque indica el componente de Figma del que proviene.
+ */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; }
+body {
+  background: var(--surface-surface-page);
+  color: var(--text-body);
+  font-family: var(--font-family);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+p { margin: 0; }
+img { display: block; }
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
+:focus-visible { outline: 2px solid var(--surface-border-hover); outline-offset: 2px; }
+
+/* ── Header (version=Op, device=Desktop) ─────────────────────────── */
+.ds-header {
+  position: sticky; top: 0; z-index: 10;
+  height: 56px;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 8px var(--spacing-3);
+  background: var(--color-purple-50);
+}
+.ds-header__brand, .ds-header__ctas { flex: 1 0 0; min-width: 0; display: flex; align-items: center; }
+.ds-header__ctas { justify-content: flex-end; gap: var(--spacing-2); }
+.ds-header__logo { display: flex; align-items: flex-end; gap: var(--spacing-1); }
+.ds-role-badge {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 2px 6px; border-radius: 80px; opacity: 0.9;
+  background: var(--color-ilustrations-green-200);
+  color: var(--buttons-actions-link);
+}
+
+/* _Profilebase */
+.ds-profilebase {
+  position: relative;
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 8px;
+  border-radius: var(--radius-full);
+  background: var(--surface-surface-card);
+  color: var(--buttons-actions-icon);
+}
+.ds-profilebase--ghost { background: transparent; }
+.ds-profilebase--perfil { padding: 4px 8px; }
+.ds-profilebase__status { position: absolute; top: 0; right: 0; }
+.ds-avatar {
+  width: 32px; height: 32px; border-radius: 30px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--feedback-info-surface);
+  color: var(--buttons-actions-icon);
+  font: 600 14px/1.2 var(--font-family);
+}
+
+/* Search field V2 */
+.ds-search {
+  display: flex; align-items: center; height: 40px; overflow: hidden;
+  border-radius: var(--radius-full);
+  background: var(--surface-surface-page);
+}
+.ds-search--inside { background: var(--surface-surface-page-input); max-width: 500px; flex: 1 0 0; }
+.ds-search__input {
+  flex: 1 0 0; min-width: 0; height: 100%;
+  padding: 8px 16px; border: 0; background: transparent;
+  color: var(--text-body);
+  font: 400 16px/1.2 var(--font-family); letter-spacing: 0.3px;
+  text-overflow: ellipsis;
+}
+.ds-search__input::placeholder { color: var(--text-placeholder); }
+.ds-search__input:focus { outline: none; }
+.ds-search:focus-within { box-shadow: inset 0 0 0 1px var(--surface-border-hover); }
+.ds-search__button { height: 40px; padding: 8px 16px; display: flex; align-items: center; justify-content: center; }
+
+/* ── Button (secondary/outline con icono izquierdo) ─────────────── */
+.ds-button {
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: var(--spacing-2);
+  max-width: 250px;
+  padding: 8px 16px 8px 8px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--buttons-actions-primary);
+  background: var(--surface-surface-card);
+  color: var(--buttons-actions-primary);
+  white-space: nowrap;
+}
+
+/* ── Icon Button ────────────────────────────────────────────────── */
+.ds-icon-button {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 8px; border-radius: var(--radius-full);
+  background: var(--surface-surface-card);
+}
+.ds-icon-button--tonal { background: var(--color-purple-50); }
+.ds-icon-button--sm { padding: 4px; }
+
+/* ── KPI card ("Prices" / "Price per ounce") ────────────────────── */
+.ds-kpis {
+  display: flex; align-items: center; gap: var(--spacing-5);
+  padding: var(--spacing-4);
+  border-radius: var(--spacing-4);
+  background: var(--surface-surface-card);
+  box-shadow: var(--shadow-dropdowns);
+}
+.ds-kpi {
+  flex: 1 0 0; min-width: 0;
+  display: flex; align-items: center; gap: var(--spacing-4);
+  border-right: 1px solid var(--surface-border-default);
+}
+.ds-kpi:last-child { border-right: 0; }
+.ds-kpi__icon { display: flex; padding: var(--spacing-2); border-radius: var(--spacing-2); background: var(--kpi-icon-surface); }
+.ds-kpi__body { display: flex; flex-direction: column; gap: 4px; }
+.ds-kpi__label { font: 400 14px/1.2 var(--font-family); color: var(--text-captions); }
+.ds-kpi__value { font: 600 16px/1.2 var(--font-family); color: var(--text-body); }
+
+/* ── Card contenedora de tabla ──────────────────────────────────── */
+.ds-table-card {
+  display: flex; flex-direction: column; gap: var(--spacing-4);
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  background: var(--surface-surface-card);
+  box-shadow: var(--shadow-card);
+}
+.ds-table-card__toolbar {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  padding: var(--spacing-4) var(--spacing-4) 0;
+}
+.ds-table-card__filters { padding: 0 var(--spacing-4); }
+
+/* Paginador */
+.ds-paginator { display: flex; align-items: center; gap: 8px; }
+.ds-paginator__group { display: flex; align-items: center; gap: 4px; }
+.ds-paginator__label { font: 400 16px/1.2 var(--font-family); letter-spacing: 0.3px; color: var(--text-body); white-space: nowrap; }
+
+/* ── Choice Chips ───────────────────────────────────────────────── */
+.ds-chips { display: flex; flex-wrap: wrap; gap: var(--spacing-2); }
+.ds-choice-chip {
+  display: inline-flex; align-items: center; justify-content: center; gap: var(--spacing-2);
+  padding: var(--spacing-2) var(--spacing-3);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--surface-border-default);
+  background: var(--surface-surface-card);
+  color: var(--text-body);
+  font: 400 14px/1.2 var(--font-family);
+  white-space: nowrap;
+}
+.ds-choice-chip[aria-pressed="true"] {
+  border-color: var(--surface-border-hover);
+  background: var(--color-purple-50);
+  color: var(--surface-border-active);
+  font-weight: 600;
+}
+
+/* ── Status Chips (Tags) ────────────────────────────────────────── */
+.ds-tag {
+  display: inline-flex; align-items: center; justify-content: center; gap: var(--spacing-1);
+  height: 18px; padding: 4px;
+  border-radius: var(--radius-xs);
+  font: 400 12px/12px var(--font-family);
+  white-space: nowrap;
+}
+.ds-tag--neutral { background: var(--surface-surface-card); border: 1px solid var(--surface-border-default); color: var(--text-body); }
+.ds-tag--success { background: var(--color-ilustrations-green-100); color: var(--feedback-success-title); }
+.ds-tag--warning { background: var(--feedback-warning-surface); color: var(--feedback-warning-title); }
+
+/* ── _Table base + Component 158 (row) ──────────────────────────── */
+.ds-table { width: 100%; }
+.ds-table__row {
+  display: grid;
+  grid-template-columns: 87px 119px 149px 134px 107px 143px 138px 89px 1fr;
+  gap: 16px; align-items: center;
+  padding: var(--spacing-1) 16px;
+  border-bottom: 1px solid var(--surface-border-default);
+  color: inherit; text-decoration: none;
+}
+.ds-table__head .ds-table__cell { font: 600 14px/1.2 var(--font-family); color: var(--uso-color-titulos); }
+.ds-table__cell { min-height: 40px; padding: 4px 0; display: flex; flex-direction: column; justify-content: center; gap: 4px; font: 400 14px/1.2 var(--font-family); color: var(--text-body); min-width: 0; }
+.ds-table__cell--tags { flex-direction: row; flex-wrap: wrap; justify-content: flex-start; align-items: center; align-content: center; }
+.ds-table__cell--center { align-items: center; text-align: center; }
+.ds-table__cell--right { align-items: flex-end; text-align: right; }
+.ds-table__caption { font: 400 12px/12px var(--font-family); color: var(--text-captions); white-space: nowrap; }
+.ds-table__chevron { visibility: hidden; justify-self: end; }
+
+.ds-table__body .ds-table__row { cursor: pointer; background: var(--surface-surface-card); }
+.ds-table__body .ds-table__row--nuevo { background: var(--color-purple-50); } /* Property 1=nuevo */
+.ds-table__body .ds-table__row:hover .ds-table__chevron,
+.ds-table__body .ds-table__row:focus-visible .ds-table__chevron { visibility: visible; } /* Property 1=hover */
+.ds-table__body .ds-table__row:last-child { border-bottom: 0; }
+.ds-table__empty { padding: var(--spacing-5) 16px; font: 400 14px/1.2 var(--font-family); color: var(--text-captions); text-align: center; }
+
+/* ── Tab Menu header (barra inferior) ───────────────────────────── */
+.ds-tab-menu {
+  position: sticky; bottom: 0; z-index: 10;
+  display: flex; align-items: center; gap: 1px;
+  border-top: 0.5px solid var(--color-purple-50);
+  border-top-left-radius: 16px;
+  background: var(--color-purple-10);
+}
+.ds-tab-menu__tab {
+  height: 44px; display: flex; align-items: center; gap: var(--spacing-2);
+  padding: 8px 24px;
+  border-top: 2px solid var(--color-purple-200);
+  border-radius: 16px 16px 0 0;
+  background: var(--color-purple-50);
+  color: var(--surface-border-active);
+  font: 600 14px/1.2 var(--font-family);
+}
+.ds-tab-menu__add { padding: 8px 16px; display: flex; align-items: center; }

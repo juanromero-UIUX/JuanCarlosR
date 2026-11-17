@@ -1,0 +1,12 @@
+/* Layout de la pantalla "Ordenes y operaciones nuevo" (Figma 3396:2015) */
+.page {
+  flex: 1 0 auto;
+  width: 100%;
+  max-width: calc(1152px + 2 * var(--spacing-7));
+  margin: 0; /* Figma: contenido alineado a la izquierda, padding 48px */
+  display: flex; flex-direction: column; gap: 16px;
+  padding: 16px var(--spacing-7);
+}
+.page__title-row { display: flex; align-items: flex-start; gap: 8px; }
+.page__title { flex: 1 0 0; margin: 0; color: var(--uso-color-titulos); }
+.page__toolbar-right { display: flex; align-items: center; justify-content: flex-end; }
