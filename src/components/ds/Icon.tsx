@@ -11,13 +11,13 @@ const byName: Record<string, string> = Object.fromEntries(
 export type IconName =
   | 'hamburger' | 'search' | 'notification' | 'pos-terminal' | 'status-dot' | 'settings' | 'cart' | 'sync'
   | 'export' | 'add' | 'check' | 'filter' | 'arrow-forward'
-  | 'page-first' | 'page-prev' | 'page-next' | 'page-last'
+  | 'pagination-first' | 'pagination-prev' | 'pagination-next' | 'pagination-last' | 'arrow-down-sm'
   | 'kpi-nuevos-pedidos' | 'kpi-por-enviar' | 'kpi-devoluciones' | 'kpi-cancelaciones' | 'kpi-envios-por-vencer'
   | 'logo-ataskate';
 
 type IconProps = {
   name: IconName;
-  size?: 12 | 20 | 24;
+  size?: 12 | 16 | 20 | 24;
   /** Solo para assets no cuadrados (p. ej. logo 130×24). */
   width?: number;
   height?: number;

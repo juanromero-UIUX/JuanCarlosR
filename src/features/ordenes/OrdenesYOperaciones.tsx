@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react';
-import { Button, ChoiceChips, IconButton, KpiSummary, Paginator, SearchField } from '../../components/ds';
+import { Button, ChoiceChips, KpiSummary, SearchField, TablePagination } from '../../components/ds';
 import { OrdersTable } from './OrdersTable';
 import { filtros, kpis, ordenes, porPagina, totalRegistros } from './mockData';
 import type { FiltroOrdenes, Orden } from './types';
@@ -46,10 +46,7 @@ export function OrdenesYOperaciones({ onExport, onOpenFilters, onSelectOrden, on
               setPage(1);
             }}
           />
-          <div className={styles.toolbarRight}>
-            <Paginator page={page} pageSize={porPagina} total={total} onPageChange={setPage} />
-            <IconButton icon="filter" label="Filtros" onClick={onOpenFilters} />
-          </div>
+          <Button size="medium" leftIcon="filter" onClick={onOpenFilters}>Filtrar por</Button>
         </div>
 
         <div className={styles.filters}>
@@ -65,11 +62,14 @@ export function OrdenesYOperaciones({ onExport, onOpenFilters, onSelectOrden, on
           />
         </div>
 
-        <OrdersTable
-          ordenes={visibles}
-          emptyMessage={query.trim() ? 'No encontramos órdenes con esa búsqueda.' : 'No hay órdenes para mostrar.'}
-          onSelect={(o) => onSelectOrden?.(o)}
-        />
+        <div>
+          <OrdersTable
+            ordenes={visibles}
+            emptyMessage={query.trim() ? 'No encontramos órdenes con esa búsqueda.' : 'No hay órdenes para mostrar.'}
+            onSelect={(o) => onSelectOrden?.(o)}
+          />
+          <TablePagination page={page} pageSize={porPagina} total={total} onPageChange={setPage} />
+        </div>
       </section>
     </main>
   );

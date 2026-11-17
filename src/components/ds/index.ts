@@ -5,6 +5,6 @@ export { SearchField } from './SearchField';
 export { ChoiceChips, type ChoiceChipOption } from './ChoiceChips';
 export { StatusTag, type StatusTagTone } from './StatusTag';
 export { KpiSummary, type Kpi } from './KpiSummary';
-export { Paginator } from './Paginator';
+export { TablePagination } from './TablePagination';
 export { Header } from './Header';
 export { TabMenuHeader } from './TabMenuHeader';

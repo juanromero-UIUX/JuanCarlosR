@@ -24,5 +24,4 @@
 .body .nuevo { background: var(--color-purple-50); }
 .body .row:hover .chevron,
 .body .row:focus-visible .chevron { visibility: visible; }
-.body .row:last-child { border-bottom: 0; }
 .empty { padding: var(--spacing-5) 16px; font: 400 14px/1.2 var(--font-family); color: var(--text-captions); text-align: center; }
