@@ -1,0 +1,4 @@
+/* Paginador */
+.paginator { display: flex; align-items: center; gap: 8px; }
+.group { display: flex; align-items: center; gap: 4px; }
+.label { font: 400 16px/1.2 var(--font-family); letter-spacing: 0.3px; color: var(--text-body); white-space: nowrap; }

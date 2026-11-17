@@ -1,0 +1,21 @@
+/* Layout "Ordenes y operaciones nuevo" (Figma 3396:2015) */
+.page {
+  flex: 1 0 auto;
+  width: 100%;
+  max-width: calc(1152px + 2 * var(--spacing-7));
+  display: flex; flex-direction: column; gap: 16px;
+  padding: 16px var(--spacing-7);
+}
+.titleRow { display: flex; align-items: flex-start; gap: 8px; }
+.title { flex: 1 0 0; color: var(--uso-color-titulos); font: 600 28px/1.2 var(--font-family); }
+
+.card {
+  display: flex; flex-direction: column; gap: var(--spacing-4);
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  background: var(--surface-surface-card);
+  box-shadow: var(--shadow-card);
+}
+.toolbar { display: flex; align-items: flex-start; justify-content: space-between; padding: var(--spacing-4) var(--spacing-4) 0; }
+.toolbarRight { display: flex; align-items: center; justify-content: flex-end; }
+.filters { padding: 0 var(--spacing-4); }

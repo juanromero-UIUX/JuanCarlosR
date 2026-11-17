@@ -1,0 +1,13 @@
+/* Button · secundario con icono izquierdo (Figma 2072:3589) */
+.button {
+  display: inline-flex; align-items: center; justify-content: center;
+  gap: var(--spacing-2);
+  max-width: 250px;
+  padding: 8px 16px 8px 8px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--buttons-actions-primary);
+  background: var(--surface-surface-card);
+  color: var(--buttons-actions-primary);
+  font: 700 14px/20px var(--font-family);
+  white-space: nowrap;
+}

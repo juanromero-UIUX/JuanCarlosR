@@ -1,0 +1,11 @@
+/* Status Chips (Tags) */
+.tag {
+  display: inline-flex; align-items: center; justify-content: center; gap: var(--spacing-1);
+  height: 18px; padding: 4px;
+  border-radius: var(--radius-xs);
+  font: 400 12px/12px var(--font-family);
+  white-space: nowrap;
+}
+.neutral { background: var(--surface-surface-card); border: 1px solid var(--surface-border-default); color: var(--text-body); }
+.success { background: var(--color-ilustrations-green-100); color: var(--feedback-success-title); }
+.warning { background: var(--feedback-warning-surface); color: var(--feedback-warning-title); }

@@ -1,0 +1,18 @@
+/* Card de indicadores ("Prices" / "Price per ounce" en Figma) */
+.card {
+  display: flex; align-items: center; gap: var(--spacing-5);
+  padding: var(--spacing-4);
+  border-radius: var(--spacing-4);
+  background: var(--surface-surface-card);
+  box-shadow: var(--shadow-dropdowns);
+}
+.item {
+  flex: 1 0 0; min-width: 0;
+  display: flex; align-items: center; gap: var(--spacing-4);
+  border-right: 1px solid var(--surface-border-default);
+}
+.item:last-child { border-right: 0; }
+.icon { display: flex; padding: var(--spacing-2); border-radius: var(--spacing-2); background: var(--kpi-icon-surface); }
+.body { display: flex; flex-direction: column; gap: 4px; }
+.label { font: 400 14px/1.2 var(--font-family); color: var(--text-captions); }
+.value { font: 600 16px/1.2 var(--font-family); color: var(--text-body); }

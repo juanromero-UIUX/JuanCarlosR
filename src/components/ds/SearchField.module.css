@@ -1,0 +1,18 @@
+/* Search field V2 */
+.search {
+  display: flex; align-items: center; height: 40px; overflow: hidden;
+  border-radius: var(--radius-full);
+  background: var(--surface-surface-page);
+}
+.inside { background: var(--surface-surface-page-input); max-width: 500px; flex: 1 0 0; }
+.search:focus-within { box-shadow: inset 0 0 0 1px var(--surface-border-hover); }
+.input {
+  flex: 1 0 0; min-width: 0; height: 100%;
+  padding: 8px 16px; border: 0; background: transparent;
+  color: var(--text-body);
+  font: 400 16px/1.2 var(--font-family); letter-spacing: 0.3px;
+  text-overflow: ellipsis;
+}
+.input::placeholder { color: var(--text-placeholder); }
+.input:focus { outline: none; }
+.button { height: 40px; padding: 8px 16px; display: flex; align-items: center; justify-content: center; }

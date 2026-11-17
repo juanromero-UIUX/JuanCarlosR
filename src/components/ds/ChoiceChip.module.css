@@ -1,0 +1,18 @@
+/* Choice Chips */
+.group { display: flex; flex-wrap: wrap; gap: var(--spacing-2); }
+.chip {
+  display: inline-flex; align-items: center; justify-content: center; gap: var(--spacing-2);
+  padding: var(--spacing-2) var(--spacing-3);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--surface-border-default);
+  background: var(--surface-surface-card);
+  color: var(--text-body);
+  font: 400 14px/1.2 var(--font-family);
+  white-space: nowrap;
+}
+.selected {
+  border-color: var(--surface-border-hover);
+  background: var(--color-purple-50);
+  color: var(--surface-border-active);
+  font-weight: 600;
+}
